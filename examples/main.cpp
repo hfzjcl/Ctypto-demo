@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cstdint>
 
-#include "sha256.h"
+#include "../src/hash/sha256.h"
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
