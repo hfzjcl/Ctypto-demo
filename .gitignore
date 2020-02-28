@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+
+# mac
+.Ds_Store
+
+.vscode/
