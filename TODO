@@ -1,0 +1,8 @@
+1. 文件引用问题
+Undefined symbols for architecture x86_64:
+  "sha256(char*, unsigned char*)", referenced from:
+      _main in main-e2f140.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+2. 编写合理的cmake文件
