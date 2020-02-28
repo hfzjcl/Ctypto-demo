@@ -1,7 +1,21 @@
+
+#define CKB_VM
+
 #include <cstdio>
 #include <cstdint>
 
+
+
+
+# ifdef CKB_VM
+#include "ckb_syscalls.h"
+#include "sha256.h"
+# else
 #include "../src/hash/sha256.h"
+# endif
+
+
+
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
@@ -19,15 +33,22 @@ int main(int argc, char* argv[]) {
     char format[64];
 
     for (int i=0;i<32;i++){
-        printf("%02x",(char*)out[i]);
-    }
-    printf("\n");
-
-    for (int i=0;i<32;i++){
         sprintf(&format[2*i],"%02x",(char*)out[i]);
     }
 
+    // 本地跑、ckb跑
+
+    # ifndef CKB_VM
+
     printf("%s",format);
+
+    # else
+
+    ckb_debug(format);
+
+    #   endif
+
+    
 
 
 
