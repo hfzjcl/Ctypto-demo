@@ -1,18 +1,17 @@
 
-#define CKB_VM
+//#define CKB_VM
 
 #include <cstdio>
 #include <cstdint>
 
 
+#include "sha256.h"
 
 
 # ifdef CKB_VM
 #include "ckb_syscalls.h"
-#include "sha256.h"
-# else
-#include "../src/hash/sha256.h"
-# endif
+
+#endif
 
 
 
@@ -47,9 +46,6 @@ int main(int argc, char* argv[]) {
     ckb_debug(format);
 
     #   endif
-
-    
-
 
 
 
