@@ -7,5 +7,5 @@
 
 #endif //UNTITLED3_SHA256_H
 
-
+#include <cstdint>
 void sha256(char *, uint8_t *);

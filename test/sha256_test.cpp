@@ -6,7 +6,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
-# include "../src/hash/sha256.h"
+# include "sha256.h"
 # include "sha256_test.h"
 
 
