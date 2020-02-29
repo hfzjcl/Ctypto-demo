@@ -10,10 +10,10 @@ Demo for CKB crypto lib
 like `//#define CKB_VM`
 
 ```
-cmake -B build  
-cd build  
-make sha256  
-make testf  
+cd build  && rm -rf ./
+cmake ../
+make
+make test
 ```
 
 ## build example on riscv
